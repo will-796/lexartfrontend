@@ -1,0 +1,62 @@
+@import 'lucide-static/font/lucide.css';
+@import 'primeicons/primeicons.css';
+
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 29 42 118;
+    --card: 29 42 118;
+    --orange-geo: 255 124 0;
+    --blue-geo: 29 42 118;
+    --muted: 242 244 248;
+    --muted-foreground: 193 199 205;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --cool-gray-10: 242 244 248;
+    --cool-gray-20: 221 225 230;
+    --cool-gray-30: 193 199 205;
+    --cool-gray-70: 77 83 88;
+    --alert: 218 30 40;
+  }
+
+  body {
+    @apply text-foreground bg-secondary/10 text-base w-full
+  }
+
+  h1 {
+    @apply text-h1 font-bold
+  }
+
+  h2 {
+    @apply text-h2 font-bold
+  }
+
+  h3 {
+    @apply text-h3 font-bold
+  }
+
+  h4 {
+    @apply text-h4 font-bold
+  }
+}
+
+@layer utilities {
+  .icon-base {
+    @apply !text-icon
+  }
+
+  .gutter-stable {
+    scrollbar-gutter: stable;
+  }
+}
