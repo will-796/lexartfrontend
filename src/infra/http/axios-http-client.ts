@@ -5,7 +5,7 @@ export const httpRequest = async (data: AxiosRequestConfig) => {
   const apiServer = import.meta.env.VITE_API_SERVER 
   console.log(apiServer)
   let axiosResponse
-  console.log(data.data)
+  console.log(data)
   try {
     axiosResponse = await axios.request({
       url: `${apiServer}${data.url}`,
@@ -14,7 +14,6 @@ export const httpRequest = async (data: AxiosRequestConfig) => {
         ...(data.headers || {})
       },
       data: data.data,
-      withCredentials: true,
     })
 
   } catch (error) {
