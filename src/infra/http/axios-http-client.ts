@@ -13,7 +13,8 @@ export const httpRequest = async (data: AxiosRequestConfig) => {
       headers: {
         ...(data.headers || {})
       },
-      data: data.data
+      data: data.data,
+      withCredentials: true,
     })
 
   } catch (error) {
