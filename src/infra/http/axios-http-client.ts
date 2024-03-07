@@ -1,14 +1,14 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
 
-
 export const httpRequest = async (data: AxiosRequestConfig) => {
-  const apiServer = import.meta.env.VITE_API_SERVER || 'localhost:3000'
+  const apiServer = import.meta.env.VITE_API_SERVER 
+  console.log(apiServer)
   let axiosResponse
-
+  console.log(data.data)
   try {
     axiosResponse = await axios.request({
-      url: `http://${apiServer}${data.url}`,
+      url: `${apiServer}${data.url}`,
       method: data.method,
       headers: {
         ...(data.headers || {})
