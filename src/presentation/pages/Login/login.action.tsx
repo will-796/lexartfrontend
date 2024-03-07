@@ -17,7 +17,7 @@ export const loginAction = async ({ request }: ActionFunctionArgs) => {
     }
   }
 
-  const userLocation = useAuthStore.getState()?.userLocation || '/'
+  const userLocation = useAuthStore.getState()?.userLocation || '/produtos'
 
   return redirect(userLocation)
 }

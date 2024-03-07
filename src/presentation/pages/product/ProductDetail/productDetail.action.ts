@@ -7,10 +7,7 @@ export const productDetailAction = async ({
   params,
 }: ActionFunctionArgs) => {
   const formData = await request.json();
-  console.log(formData)
-
   try {
-    console.log(formData);
     
     await editProduct(
       formData,

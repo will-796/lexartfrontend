@@ -8,7 +8,7 @@ export const deleteProduct = async (teamId: string) => {
     url: `/products/${teamId}/`,
     method: "DELETE",
   });
-  console.log(httpResponse);
+
   switch (httpResponse.statusCode) {
     case HttpStatusCode.noContent:
       return redirect("/produtos");
